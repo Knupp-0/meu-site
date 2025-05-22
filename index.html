@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Meu Site Para Trabalho</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -21,6 +22,12 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
       max-width: 600px;
       margin: auto;
+      animation: fadeIn 1.2s ease-in-out;
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
     }
 
     h1 {
@@ -36,12 +43,52 @@
       padding: 15px;
       border-radius: 10px;
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 1.1em;
+      transition: transform 0.2s ease;
+    }
+
+    li:hover {
+      transform: scale(1.05);
+    }
+
+    .icon {
+      margin-right: 10px;
+      color: #ffe600;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Bem-vindo ao meu site!</h1>
-    <p>Esta funcionando !!!😄</p>
+    <p>Está funcionando!!! 😄</p>
+
+    <ul>
+      <li><i class="fab fa-html5 icon"></i>HTML5</li>
+      <li><i class="fab fa-css3-alt icon"></i>CSS3</li>
+      <li><i class="fab fa-js icon"></i>JavaScript</li>
+      <li><i class="fas fa-network-wired icon"></i>Redes</li>
+      <li><i class="fas fa-microchip icon"></i>Arquitetura de Computadores</li>
+    </ul>
   </div>
 </body>
 </html>
